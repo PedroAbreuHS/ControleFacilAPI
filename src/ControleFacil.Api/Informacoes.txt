@@ -25,8 +25,9 @@ Executar migrations
 	2º - Criar o repositório;
 		- Criar duas pastas, entidades e interfaces;
 		- Criar interface(contrato) para toda entidade/repositorio;
-	3º - Criar o serviço;
-	4º - Criar o controller.
+	3º - Contrato ou DTO (Data Transfer Object);
+	4º - Criar o serviço;
+	5º - Criar o controller.
 
 
 
