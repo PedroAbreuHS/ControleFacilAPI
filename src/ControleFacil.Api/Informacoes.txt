@@ -1,0 +1,14 @@
+Entity Framework:
+Instalar o dotnet-ef
+	Comando:
+	dotnet tool install --global dotnet-ef --version 7.0.0-*
+
+Criar as migrations
+	Comando:
+	dotnet ef migrations add CriarEntidadeUsuario
+
+Executar migrations
+	Comando:
+	dotnet ef database update
+
+
