@@ -1,5 +1,6 @@
 using System.Text;
 using ControleFacil.Api.Data;
+using ControleFacil.Api.Domain.Repository.Interfaces_;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.EntityFrameworkCore;
 using Microsoft.IdentityModel.Tokens;
@@ -17,7 +18,7 @@ ConfigurarAplicacao(app);
 
 app.Run();
 
-// Metodo que configrua as injeções de dependencia do projeto.
+// Metodo que configura as injeções de dependencia do projeto.
 static void ConfigurarInjecaoDeDependencia(WebApplicationBuilder builder)
 {
     string? connectionString = builder.Configuration.GetConnectionString("PADRAO");
@@ -27,7 +28,9 @@ static void ConfigurarInjecaoDeDependencia(WebApplicationBuilder builder)
 
     builder.Services
     .AddSingleton(builder.Configuration)
-    .AddSingleton(builder.Environment);
+    .AddSingleton(builder.Environment)
+    .AddScoped<IUsuarioRepository, IUsuarioRepository>();
+
 }
 
 // Configura o serviços da API.

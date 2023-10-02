@@ -1,3 +1,4 @@
+
 Entity Framework:
 Instalar o dotnet-ef
 	Comando:
@@ -10,5 +11,24 @@ Criar as migrations
 Executar migrations
 	Comando:
 	dotnet ef database update
+
+--Passos para criar uma nova entidade (classe):
+
+	1º - Criar o modelo;
+	2º - Criar o mapeamento;
+	3º - Adicionar mapeamento no ApplicationContext;
+	4º - Criar a migration da nova entidade;
+	5º - Executar a migration.
+
+--Criando o CRUD:
+	1º - Existir o Modelo / Entidade / Classe;
+	2º - Criar o repositório;
+		- Criar duas pastas, entidades e interfaces;
+		- Criar interface(contrato) para toda entidade/repositorio;
+	3º - Criar o serviço;
+	4º - Criar o controller.
+
+
+
 
 
